@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Corsa di Catalano Lorenzo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700&family=Cinzel:wght@500;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&display=swap">
+<style>
+:root{--bg:#F7F0DE;--card:#FFFAEC;--ink:#2B1A20;--muted:#6A5850;--gold:#B8893A;--gold-ink:#7C5614;--gold-hi:#E3C174;--gold-lo:#8A6420;--wine:#6E1423;--night:#0F1B3D;--night2:#1B2A5A;--line:rgba(110,20,35,.22);--f-display:'Cinzel','Trajan Pro','Times New Roman',serif;--f-serif:'Cormorant Garamond',Georgia,serif;--f-sans:'Albert Sans','Helvetica Neue',Arial,sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0A1130;--card:#141F4A;--ink:#F3EAD3;--muted:#B9B09B;--gold:#D9B15B;--gold-ink:#E8C57A;--gold-hi:#F2D894;--gold-lo:#B8893A;--wine:#B8384C;--line:rgba(227,193,116,.28);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0A1130;--card:#141F4A;--ink:#F3EAD3;--muted:#B9B09B;--gold:#D9B15B;--gold-ink:#E8C57A;--gold-hi:#F2D894;--gold-lo:#B8893A;--wine:#B8384C;--line:rgba(227,193,116,.28);color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.6 var(--f-sans);margin:0}
+.wrap{max-width:1040px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(15,27,61,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--gold-lo)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:56px}
+.brand{font:700 1rem/1 var(--f-display);color:#F3EAD3;text-decoration:none;letter-spacing:.06em;white-space:nowrap}.brand i{color:var(--gold-hi);font-style:normal}
+.tools{display:flex;gap:8px}
+.ib{min-width:38px;height:38px;padding:0 10px;border-radius:99px;border:1px solid var(--gold-lo);background:transparent;color:#F3EAD3;font:700 .78rem var(--f-display);cursor:pointer}
+.ib#btnTheme{font-size:1.15rem;line-height:1}.ib:hover{background:rgba(227,193,116,.15)}
+.hero{position:relative;overflow:hidden;color:#FFF4E0;background:radial-gradient(ellipse at 50% 120%,#B8384C 0%,#6E1423 30%,#1B2A5A 70%,#0F1B3D 100%);padding-block:clamp(24px,4vw,48px) clamp(64px,7vw,96px)}
+.hero::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(115deg,transparent 0 46px,rgba(227,193,116,.05) 46px 47px);pointer-events:none}
+.spark{position:absolute;width:6px;height:6px;border-radius:50%;background:var(--gold-hi);opacity:0;animation:spark 6s linear infinite}
+@keyframes spark{0%{transform:translateY(40px) scale(.4);opacity:0}15%{opacity:.9}100%{transform:translateY(-320px) scale(1.1);opacity:0}}
+.hero-in{position:relative;display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:clamp(20px,5vw,56px);align-items:center}
+.portrait{position:relative;justify-self:center;text-align:center}
+.portrait .ring{position:absolute;inset:-14px;border-radius:50%;border:2px dashed var(--gold-hi);opacity:.7;animation:spin 24s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.portrait .disc{position:relative;width:min(240px,62vw);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 50% 35%,#FFE9B0,#F3B45A 55%,#B8384C);border:4px solid var(--gold-hi);box-shadow:0 20px 50px rgba(0,0,0,.45),inset 0 0 40px rgba(255,255,255,.25);display:grid;place-items:center;overflow:hidden}
+.portrait canvas{width:78%;height:auto;display:block;filter:drop-shadow(0 6px 4px rgba(0,0,0,.25))}
+.plate{display:inline-block;margin-top:18px;padding:7px 18px;border:1px solid var(--gold-hi);border-radius:4px;background:rgba(15,27,61,.7);font:700 .78rem var(--f-display);letter-spacing:.2em;text-transform:uppercase;color:var(--gold-hi)}
+.eyebrow{font:600 .78rem/1 var(--f-display);letter-spacing:.3em;text-transform:uppercase;color:var(--gold-hi)}
+h1{font:700 clamp(1.9rem,5vw,3.4rem)/1.08 var(--f-display);margin:14px 0 16px;text-wrap:balance;text-shadow:0 4px 28px rgba(0,0,0,.5)}
+h1 .name{display:inline-block;font-family:var(--f-serif);font-style:italic;font-weight:600;font-size:1.12em;background:linear-gradient(100deg,#F3D58B,#fff6d6 40%,#E3C174 60%,#F3D58B);background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 4s ease-in-out infinite;padding:0 .08em}
+@keyframes shine{50%{background-position:100% 0}}
+.sub{font:italic 500 clamp(1.1rem,2.4vw,1.5rem)/1.4 var(--f-serif);color:#F3EAD3;max-width:46ch;margin:0 0 22px}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips span{padding:8px 14px;border:1px solid var(--gold-lo);border-radius:99px;background:rgba(15,27,61,.55);font:600 .85rem var(--f-sans);color:#F3EAD3}
+main{padding-block:clamp(24px,5vw,56px)}
+.runner{position:relative;margin-top:-72px;padding:14px;display:grid;gap:12px;background:var(--card);border:1px solid var(--gold);border-radius:8px;box-shadow:inset 0 0 0 4px var(--card),inset 0 0 0 5px color-mix(in srgb,var(--gold) 55%,transparent),0 24px 50px -24px rgba(0,0,0,.6)}
+.runner-bar{display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap;font:600 .95rem/1 var(--f-sans)}
+.runner-bar b{font-family:var(--f-display);letter-spacing:.12em;font-size:.72rem;text-transform:uppercase;color:var(--gold-ink)}
+.runner-bar output{font-variant-numeric:tabular-nums}
+#rnCv{width:100%;height:auto;aspect-ratio:3/1;display:block;border-radius:8px;border:2px solid var(--gold-lo);background:#F8E3B8;touch-action:manipulation;cursor:pointer;outline-offset:3px}
+#rnCv.shake{animation:shake .4s}
+@keyframes shake{20%{transform:translateX(-9px)}40%{transform:translateX(8px)}60%{transform:translateX(-6px)}80%{transform:translateX(4px)}}
+.runner-btns{display:none;gap:12px}
+.btn{font:700 1rem var(--f-sans);padding:14px 22px;border-radius:6px;border:1px solid var(--gold-lo);cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;min-height:50px}
+.btn.gold{background:linear-gradient(180deg,#F3D58B,#B8893A);color:#2B1A20}.btn.ghost{background:transparent;color:var(--ink)}
+.runner-btns .btn{flex:1;user-select:none;-webkit-user-select:none;touch-action:manipulation;font-size:1.05rem}
+@media (pointer:coarse),(max-width:720px){.runner-btns{display:flex}}
+.note{color:var(--muted);font-size:.9rem;margin:0}
+.chip{padding:9px 16px;border-radius:99px;border:1px solid var(--gold);background:transparent;color:var(--ink);font:600 .85rem var(--f-sans);cursor:pointer}
+footer{padding:8px 0 40px;text-align:center}
+@media (max-width:720px){.hero-in{grid-template-columns:minmax(0,1fr);text-align:center}.sub{margin-inline:auto}.chips{justify-content:center}.runner{margin-top:-48px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style></head><body>
+<header class="top"><div class="wrap"><a class="brand" href="index.html" id="brandLink">Medici <i>&amp;</i> Compagnia</a><div class="tools"><button class="ib" id="btnLang" type="button" data-i-aria="gp.lang">IT</button><button class="ib" id="btnTheme" type="button" data-i-aria="gp.theme" aria-label="Tema">◐</button></div></div></header>
+<section class="hero"><div id="sparks" aria-hidden="true"></div><div class="wrap hero-in">
+  <div class="portrait"><div class="disc"><canvas id="ptCv" width="330" height="390" aria-hidden="true"></canvas></div><div class="ring" aria-hidden="true"></div><div class="plate"><span data-i="gp.plate">Eroe di Firenze</span></div></div>
+  <div><span class="eyebrow" data-i="gp.eyebrow">Gioco segreto sbloccato</span>
+  <h1 id="h1"><span data-i="gp.t1">Fate saltare a</span> <span class="name">Catalano Lorenzo</span> <span data-i="gp.t2">gli ostacoli!</span></h1>
+  <p class="sub" data-i="gp.sub"></p>
+  <div class="chips"><span data-i="gp.c1"></span><span data-i="gp.c2"></span><span data-i="gp.c3"></span></div></div>
+</div></section>
+<main class="wrap">
+  <section id="gioco-segreto" aria-labelledby="h1" class="runner">
+    <div class="runner-bar"><span><b data-i="game.dist">Metri</b>: <output id="rnScore">0</output></span><span><b data-i="game.hi">RECORD</b>: <output id="rnHi">0</output></span><button class="chip" type="button" id="rnBack" data-i="gp.back">Torna</button></div>
+    <canvas id="rnCv" width="900" height="300" tabindex="0" role="img" data-i-aria="game.aria" aria-label="Gioco"></canvas>
+    <div class="runner-btns"><button class="btn gold" type="button" id="rnJump" data-i="game.jump">Salta</button><button class="btn ghost" type="button" id="rnDuck" data-i="game.duck">Abbassati</button></div>
+    <p class="note" data-i="game.keys"></p>
+  </section>
+</main>
+<footer class="wrap"><p class="note" data-i="gp.foot"></p></footer>
+<script>
+const I18N = {"it": {"game.eyebrow": "Il gioco segreto", "game.h": "Corri, <em>Fiorentino</em>!", "game.lead": "Le vie di Firenze ti aspettano. Salta vasi, vespe e turisti con il selfie stick, abbassati sotto i piccioni e fai più strada che puoi: più corri, più il sole tramonta.", "game.start": "Premi SPAZIO o tocca per partire", "game.over": "HAI PERSO LA STRADA", "game.restart": "Premi SPAZIO o tocca per riprovare", "game.jump": "Salta", "game.duck": "Abbassati", "game.hi": "RECORD", "game.pause": "PAUSA · premi SPAZIO o tocca", "game.keys": "Comandi: SPAZIO o ↑ per saltare (tieni premuto per saltare più in alto), ↓ per abbassarti. Sul telefono tocca lo schermo o usa i due pulsanti.", "game.aria": "Gioco a scorrimento: un personaggio cartoon corre per le vie di Firenze e salta gli ostacoli.", "game.hero": "Il tuo eroe", "game.back": "Torna al sito", "game.zone1": "Piazza del Duomo", "game.zone2": "Piazza della Signoria", "game.zone3": "Ponte Vecchio", "game.zone4": "Lungarno", "game.dist": "Metri", "gp.eyebrow": "Gioco segreto sbloccato", "gp.t1": "Fate saltare a", "gp.t2": "gli ostacoli!", "gp.sub": "Aiutalo a correre per le vie di Firenze: salta vasi, Vespa e turisti col selfie stick, abbassati sotto i piccioni e batti il tuo record.", "gp.plate": "Eroe di Firenze", "gp.c1": "SPAZIO o ↑ per saltare", "gp.c2": "↓ per abbassarsi", "gp.c3": "Su telefono: tocca lo schermo", "gp.back": "Torna a Medici & Compagnia", "gp.foot": "Gioco segreto di Medici & Compagnia · il record resta nel tuo browser", "gp.lang": "Cambia lingua", "gp.theme": "Cambia tema chiaro o scuro", "gp.title": "Corsa di Catalano Lorenzo"}, "en": {"game.eyebrow": "The secret game", "game.h": "Run, <em>Florentine</em>!", "game.lead": "The streets of Florence are waiting. Jump over vases, scooters and tourists with selfie sticks, duck under the pigeons and run as far as you can: the longer you run, the lower the sun sets.", "game.start": "Press SPACE or tap to start", "game.over": "YOU LOST YOUR WAY", "game.restart": "Press SPACE or tap to retry", "game.jump": "Jump", "game.duck": "Duck", "game.hi": "BEST", "game.pause": "PAUSED · press SPACE or tap", "game.keys": "Controls: SPACE or ↑ to jump (hold to jump higher), ↓ to duck. On a phone tap the screen or use the two buttons.", "game.aria": "Endless runner: a cartoon character runs through the streets of Florence and jumps over obstacles.", "game.hero": "Your hero", "game.back": "Back to the site", "game.zone1": "Piazza del Duomo", "game.zone2": "Piazza della Signoria", "game.zone3": "Ponte Vecchio", "game.zone4": "Lungarno", "game.dist": "Metres", "gp.eyebrow": "Secret game unlocked", "gp.t1": "Make", "gp.t2": "jump over the obstacles!", "gp.sub": "Help him run through the streets of Florence: leap over vases, scooters and tourists with selfie sticks, duck under the pigeons and beat your record.", "gp.plate": "Hero of Florence", "gp.c1": "SPACE or ↑ to jump", "gp.c2": "↓ to duck", "gp.c3": "On a phone: tap the screen", "gp.back": "Back to Medici & Compagnia", "gp.foot": "Secret game by Medici & Compagnia · your record stays in your browser", "gp.lang": "Change language", "gp.theme": "Switch light or dark theme", "gp.title": "Catalano Lorenzo’s Run"}, "fr": {"game.eyebrow": "Le jeu secret", "game.h": "Courez, <em>Florentin</em> !", "game.lead": "Les rues de Florence vous attendent. Sautez par-dessus vases, scooters et touristes à perche à selfie, baissez-vous sous les pigeons et courez aussi loin que possible : plus vous courez, plus le soleil se couche.", "game.start": "Appuyez sur ESPACE ou touchez pour commencer", "game.over": "VOUS VOUS ÊTES PERDU", "game.restart": "Appuyez sur ESPACE ou touchez pour réessayer", "game.jump": "Sauter", "game.duck": "Se baisser", "game.hi": "RECORD", "game.pause": "PAUSE · appuyez sur ESPACE ou touchez", "game.keys": "Commandes : ESPACE ou ↑ pour sauter (maintenez pour sauter plus haut), ↓ pour se baisser. Sur téléphone, touchez l’écran ou utilisez les deux boutons.", "game.aria": "Jeu de course sans fin : un personnage de dessin animé court dans les rues de Florence et saute par-dessus les obstacles.", "game.hero": "Votre héros", "game.back": "Retour au site", "game.zone1": "Piazza del Duomo", "game.zone2": "Piazza della Signoria", "game.zone3": "Ponte Vecchio", "game.zone4": "Lungarno", "game.dist": "Mètres", "gp.eyebrow": "Jeu secret débloqué", "gp.t1": "Faites sauter les obstacles à", "gp.t2": "!", "gp.sub": "Aidez-le à courir dans les rues de Florence : sautez par-dessus vases, scooters et touristes à perche à selfie, baissez-vous sous les pigeons et battez votre record.", "gp.plate": "Héros de Florence", "gp.c1": "ESPACE ou ↑ pour sauter", "gp.c2": "↓ pour se baisser", "gp.c3": "Sur téléphone : touchez l’écran", "gp.back": "Retour à Medici & Compagnia", "gp.foot": "Jeu secret de Medici & Compagnia · votre record reste dans votre navigateur", "gp.lang": "Changer de langue", "gp.theme": "Basculer entre thème clair et sombre", "gp.title": "La course de Catalano Lorenzo"}};
+const $ = (s, r) => (r || document).querySelector(s);
+const $$ = (s, r) => Array.from((r || document).querySelectorAll(s));
+const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+const LANGS = ['it', 'en', 'fr'];
+let S = {};
+try { S = JSON.parse(localStorage.getItem('mc_florence_v1')) || {}; } catch (e) { S = {}; }
+const savePref = () => { try { const o = JSON.parse(localStorage.getItem('mc_florence_v1')) || {}; o.lang = lang; o.theme = S.theme || null; localStorage.setItem('mc_florence_v1', JSON.stringify(o)); } catch (e) { /* ok */ } };
+let lang = LANGS.includes(S.lang) ? S.lang : (() => { const n = (navigator.language || 'it').toLowerCase(); return n.startsWith('fr') ? 'fr' : n.startsWith('en') ? 'en' : 'it'; })();
+const t = (k) => (I18N[lang] && I18N[lang][k]) || I18N.it[k] || k;
+const chime = () => {};
+function applyStatic() {
+  document.documentElement.lang = lang; document.title = t('gp.title');
+  $$('[data-i]').forEach((e) => { e.textContent = t(e.dataset.i); });
+  $$('[data-i-aria]').forEach((e) => e.setAttribute('aria-label', t(e.dataset.iAria)));
+  $('#btnLang').textContent = lang.toUpperCase();
+}
+function applyTheme() { if (S.theme) document.documentElement.setAttribute('data-theme', S.theme); else document.documentElement.removeAttribute('data-theme'); }
+/* ============================ IL RUNNER ============================ */
+const RUN = (() => {
+  const W = 900, H = 300, GY = 250;
+  let cv, cx, raf = 0, last = 0, started = false;
+  let state = 'ready'; // ready | run | over | pause
+  let hi = 0;
+  try { hi = +localStorage.getItem('mc_runner_hi') || 0; } catch (e) { /* senza storage */ }
+  let g;
+  const hero = { x: 70, y: GY, vy: 0, jump: false, duck: false, frame: 0, holdJump: false, fast: false };
+  const rnd = (a, b) => a + Math.random() * (b - a);
+  const layers = {};
+
+  /* ---- sfondo: skyline di Firenze pre-disegnata (giorno e notte) ---- */
+  function buildSky(night) {
+    const c = document.createElement('canvas'); c.width = 1800; c.height = 260; const x = c.getContext('2d');
+    const col = night ? { far: '#2A2350', mid: '#3A2A55', wall: '#4A3158', roof: '#6A2E3E', dome: '#7A3347', win: '#F3D58B' } : { far: '#C9B3A0', mid: '#B08A78', wall: '#D9B98E', roof: '#B5502F', dome: '#C25A38', win: '#8A6A4A' };
+    // colline lontane
+    x.fillStyle = col.far; x.beginPath(); x.moveTo(0, 260); for (let i = 0; i <= 1800; i += 60) x.lineTo(i, 170 + Math.sin(i / 170) * 26 + Math.sin(i / 61) * 8); x.lineTo(1800, 260); x.fill();
+    const base = 255;
+    // case basse con tetti
+    const house = (hx, w, h) => { x.fillStyle = col.wall; x.fillRect(hx, base - h, w, h); x.fillStyle = col.roof; x.beginPath(); x.moveTo(hx - 4, base - h); x.lineTo(hx + w / 2, base - h - 14); x.lineTo(hx + w + 4, base - h); x.fill(); x.fillStyle = col.win; for (let k = 8; k < w - 8; k += 16) x.fillRect(hx + k, base - h + 10, 6, 10); };
+    for (let hx = 0; hx < 1800; hx += 58 + (hx % 3) * 6) house(hx, 48 + (hx % 5) * 3, 40 + (hx * 7 % 5) * 6);
+    // Duomo: cupola (x=300)
+    const dome = (dx) => { x.fillStyle = col.wall; x.fillRect(dx - 80, base - 70, 160, 70); x.fillStyle = col.dome; x.beginPath(); x.ellipse(dx, base - 70, 58, 74, 0, Math.PI, 0); x.fill(); x.strokeStyle = col.roof; x.lineWidth = 2; for (let k = -40; k <= 40; k += 20) { x.beginPath(); x.moveTo(dx + k, base - 72); x.quadraticCurveTo(dx + k * .6, base - 120, dx, base - 142); x.stroke(); } x.fillStyle = col.wall; x.fillRect(dx - 7, base - 168, 14, 28); x.fillStyle = col.dome; x.beginPath(); x.moveTo(dx - 8, base - 168); x.lineTo(dx, base - 190); x.lineTo(dx + 8, base - 168); x.fill(); x.fillStyle = col.win; for (let k = -60; k <= 50; k += 22) { x.beginPath(); x.arc(dx + k + 6, base - 40, 6, Math.PI, 0); x.fillRect(dx + k, base - 40, 12, 16); x.fill(); } };
+    dome(300);
+    // Campanile di Giotto (x=430)
+    const bell = (bx) => { x.fillStyle = col.wall; x.fillRect(bx - 17, base - 175, 34, 175); x.fillStyle = col.roof; x.fillRect(bx - 20, base - 182, 40, 9); x.fillStyle = col.win; for (let r = 0; r < 4; r++) { x.fillRect(bx - 9, base - 150 + r * 36, 7, 18); x.fillRect(bx + 3, base - 150 + r * 36, 7, 18); } x.strokeStyle = col.mid; x.lineWidth = 1; for (let r = 0; r < 8; r++) { x.beginPath(); x.moveTo(bx - 17, base - 20 - r * 20); x.lineTo(bx + 17, base - 20 - r * 20); x.stroke(); } };
+    bell(430);
+    // Palazzo Vecchio (x=1000) con torre
+    const pv = (px) => { x.fillStyle = col.wall; x.fillRect(px - 70, base - 90, 140, 90); x.fillStyle = col.dome; for (let k = -70; k < 70; k += 14) x.fillRect(px + k, base - 98, 9, 8); x.fillStyle = col.win; for (let k = -56; k < 56; k += 22) { x.fillRect(px + k, base - 66, 8, 14); x.fillRect(px + k, base - 40, 8, 14); } x.fillStyle = col.wall; x.fillRect(px - 52, base - 190, 22, 100); x.fillStyle = col.dome; x.fillRect(px - 60, base - 200, 38, 12); for (let k = -60; k < -22; k += 10) x.fillRect(px + k, base - 208, 6, 8); x.fillRect(px - 48, base - 232, 14, 32); x.beginPath(); x.moveTo(px - 50, base - 232); x.lineTo(px - 41, base - 252); x.lineTo(px - 32, base - 232); x.fill(); };
+    pv(1000);
+    // Ponte Vecchio (x=1500..1720) sul fiume
+    x.fillStyle = night ? '#1F3A5A' : '#8FB4C4'; x.fillRect(1420, base - 14, 400, 14);
+    x.fillStyle = col.mid; x.fillRect(1440, base - 52, 340, 36);
+    x.fillStyle = col.roof; for (let k = 0; k < 8; k++) { x.fillRect(1444 + k * 42, base - 70, 36, 18); x.fillStyle = [col.wall, col.dome][k % 2]; x.fillRect(1448 + k * 42, base - 62, 28, 10); x.fillStyle = col.roof; }
+    x.fillStyle = night ? '#1F3A5A' : '#8FB4C4'; for (let k = 0; k < 5; k++) { x.beginPath(); x.arc(1470 + k * 70, base - 14, 26, Math.PI, 0); x.fill(); }
+    // cipressi
+    x.fillStyle = night ? '#1E3A33' : '#4D6A3A'; [90, 700, 800, 1230, 1330].forEach((cxx) => { x.beginPath(); x.ellipse(cxx, base - 36, 8, 38, 0, 0, 6.3); x.fill(); });
+    return c;
+  }
+  function buildStars() { const c = document.createElement('canvas'); c.width = 900; c.height = 190; const x = c.getContext('2d'); x.fillStyle = '#FFF4E0'; for (let i = 0; i < 70; i++) { x.globalAlpha = .4 + Math.random() * .6; x.fillRect(Math.random() * 900, Math.random() * 190, 1.5 + Math.random(), 1.5 + Math.random()); } return c; }
+
+  /* ---- il personaggio cartoon ---- */
+  function drawHero(c, x, y, st, fr, pose) {
+    const P = pose || hero;
+    // (x,y) = angolo in basso a sinistra del riquadro 48×66
+    const ink = '#2B1A22', run = st === 'run' && !P.jump;
+    c.save(); c.translate(x + 24, y);
+    if (P.duck && !P.jump) { c.translate(0, 0); c.scale(1.22, .6); }
+    c.lineJoin = 'round'; c.lineCap = 'round';
+    const s = run ? Math.sin(fr * .5) : 0, bob = run ? Math.abs(Math.cos(fr * .5)) * 2 : 0;
+    // gambe (jeans scuro) e scarpe bianche
+    const leg = (dx, lift, back) => { const ly = P.jump ? -12 : -lift; c.strokeStyle = ink; c.lineWidth = 9; c.beginPath(); c.moveTo(dx, -24); c.lineTo(dx + (P.jump ? back * 3 : back * 8), -3 + ly * .6); c.stroke(); c.strokeStyle = '#32406B'; c.lineWidth = 6; c.stroke(); c.fillStyle = '#FFF'; c.strokeStyle = ink; c.lineWidth = 2; c.beginPath(); c.ellipse(dx + (P.jump ? back * 3 : back * 8) + 3, -2 + ly * .6, 8, 4.2, 0, 0, 6.3); c.fill(); c.stroke(); };
+    leg(-6, s > 0 ? 6 : 0, s); leg(7, s < 0 ? 6 : 0, -s);
+    // maglietta grigia con la scritta al centro (solo testo)
+    c.fillStyle = '#F2C9A5'; c.strokeStyle = ink; c.lineWidth = 2.2; c.beginPath(); c.roundRect(-4.5, -56 - bob, 9, 9, 3); c.fill(); c.stroke(); // collo
+    c.fillStyle = '#B7BCC6'; c.strokeStyle = ink; c.lineWidth = 2.5;
+    c.beginPath(); c.moveTo(-17, -22 - bob); c.quadraticCurveTo(-21, -42 - bob, -12, -50 - bob); c.quadraticCurveTo(0, -45 - bob, 12, -50 - bob); c.quadraticCurveTo(21, -42 - bob, 17, -22 - bob); c.closePath(); c.fill(); c.stroke();
+    // braccia: pelle, con la manica corta della maglietta
+    const arm = (dir) => {
+      const a = P.jump ? -1.1 * dir : (run ? (.45 + s * .45) * dir : .15 * dir); // le braccia restano ai lati: non coprono mai la scritta
+      const sx = dir * 17, sy = -46 - bob, ex = sx + Math.sin(a) * 17 + dir * 3, ey = sy + Math.cos(a) * 17 * (P.jump ? -.3 : 1);
+      c.lineCap = 'round'; c.strokeStyle = ink; c.lineWidth = 9; c.beginPath(); c.moveTo(sx, sy); c.lineTo(ex, ey); c.stroke();
+      c.strokeStyle = '#F2C9A5'; c.lineWidth = 6; c.stroke();
+      const mx = sx + (ex - sx) * .3, my = sy + (ey - sy) * .3;
+      c.strokeStyle = ink; c.lineWidth = 10; c.beginPath(); c.moveTo(sx, sy); c.lineTo(mx, my); c.stroke();
+      c.strokeStyle = '#B7BCC6'; c.lineWidth = 7; c.stroke();
+      c.fillStyle = '#F2C9A5'; c.strokeStyle = ink; c.lineWidth = 1.6; c.beginPath(); c.arc(ex, ey, 3.6, 0, 6.3); c.fill(); c.stroke();
+    };
+    arm(-1); arm(1);
+    // scritta sul petto, disegnata per ultima e rimpicciolita per stare tra le maniche
+    c.save(); c.fillStyle = '#23252E'; c.textAlign = 'center'; c.textBaseline = 'alphabetic';
+    c.font = '700 6px Arial, sans-serif'; const tw = c.measureText('PlayStation').width, k = Math.min(1, 21 / tw);
+    c.font = '700 ' + (6 * k).toFixed(2) + 'px Arial, sans-serif'; c.fillText('PlayStation', 0, -33 - bob);
+    c.font = '800 ' + (9 * k).toFixed(2) + 'px Arial, sans-serif'; c.fillText('2', 0, -25 - bob);
+    c.restore();
+    // testa
+    const hy = -66 - bob;
+    c.fillStyle = '#F2C9A5'; c.strokeStyle = ink; c.lineWidth = 2.5; c.beginPath(); c.ellipse(0, hy + 2, 16, 17, 0, 0, 6.3); c.fill(); c.stroke();
+    // capelli castani: nuca, lati lunghi e frangia a ciuffo sul lato
+    c.fillStyle = '#4E3326'; c.beginPath(); c.moveTo(-17, hy + 8); c.quadraticCurveTo(-21, hy - 14, -4, hy - 18); c.quadraticCurveTo(14, hy - 20, 17, hy - 2); c.quadraticCurveTo(19, hy + 8, 14, hy + 15); c.quadraticCurveTo(13, hy + 4, 10, hy - 4); c.quadraticCurveTo(1, hy - 2, -12, hy + 4); c.quadraticCurveTo(-14, hy + 12, -17, hy + 8); c.fill(); c.stroke();
+    c.beginPath(); c.moveTo(-16, hy - 4); c.quadraticCurveTo(-6, hy - 1, 6, hy - 9); c.quadraticCurveTo(9, hy - 2, 1, hy + 4); c.strokeStyle = '#6A4634'; c.lineWidth = 1.6; c.stroke();
+    // occhi, sopracciglia, sorrisetto
+    c.fillStyle = ink; c.beginPath(); c.arc(-4.5, hy + 4, 2.1, 0, 6.3); c.arc(6, hy + 4, 2.1, 0, 6.3); c.fill();
+    c.strokeStyle = ink; c.lineWidth = 2; c.beginPath(); c.moveTo(-8, hy); c.lineTo(-2, hy - 1.4); c.moveTo(3, hy - 1.4); c.lineTo(9, hy); c.stroke();
+    c.lineWidth = 1.8; c.beginPath(); c.moveTo(-3, hy + 12); c.quadraticCurveTo(2, hy + 14.5, 7, hy + 11); c.stroke();
+    c.restore();
+  }
+
+  /* ---- ostacoli ---- */
+  const TYPES = [
+    { n: 'vaso', w: 30, h: 42 }, { n: 'cipresso', w: 24, h: 72 }, { n: 'vespa', w: 62, h: 42 }, { n: 'turisti', w: 46, h: 64 }, { n: 'carretto', w: 58, h: 56 }
+  ];
+  function drawObs(c, o, fr) {
+    const x = o.x, y = o.y, ink = '#2B1A22'; c.save(); c.lineWidth = 2.2; c.strokeStyle = ink; c.lineJoin = 'round';
+    if (o.n === 'vaso') { c.fillStyle = '#C2623A'; c.beginPath(); c.moveTo(x + 3, y); c.lineTo(x + 7, y - 26); c.lineTo(x + 23, y - 26); c.lineTo(x + 27, y); c.closePath(); c.fill(); c.stroke(); c.fillRect(x + 4, y - 31, 22, 6); c.strokeRect(x + 4, y - 31, 22, 6); c.fillStyle = '#4F7A3A'; c.beginPath(); c.arc(x + 15, y - 38, 8, 0, 6.3); c.fill(); c.stroke(); c.fillStyle = '#B8384C'; c.beginPath(); c.arc(x + 13, y - 40, 2.5, 0, 6.3); c.arc(x + 19, y - 36, 2.5, 0, 6.3); c.fill(); }
+    else if (o.n === 'cipresso') { c.fillStyle = '#3F6A3A'; c.beginPath(); c.ellipse(x + 12, y - 36, 11, 36, 0, 0, 6.3); c.fill(); c.stroke(); c.fillStyle = '#6B4A2E'; c.fillRect(x + 9, y - 6, 6, 6); }
+    else if (o.n === 'vespa') { c.fillStyle = '#86C7B6'; c.beginPath(); c.moveTo(x + 8, y - 8); c.quadraticCurveTo(x + 6, y - 30, x + 26, y - 30); c.lineTo(x + 48, y - 18); c.quadraticCurveTo(x + 58, y - 16, x + 56, y - 8); c.closePath(); c.fill(); c.stroke(); c.fillStyle = '#3B2A2A'; c.fillRect(x + 22, y - 36, 22, 6); c.strokeRect(x + 22, y - 36, 22, 6); c.fillRect(x + 44, y - 40, 3, 22); c.fillStyle = '#222'; [[x + 12, y - 7], [x + 49, y - 7]].forEach(([wx, wy]) => { c.beginPath(); c.arc(wx, wy, 7, 0, 6.3); c.fill(); c.stroke(); c.fillStyle = '#EEE'; c.beginPath(); c.arc(wx, wy, 2.5, 0, 6.3); c.fill(); c.fillStyle = '#222'; }); }
+    else if (o.n === 'turisti') { const person = (px, col, hat) => { c.fillStyle = col; c.beginPath(); c.roundRect(px - 8, y - 40, 16, 28, 5); c.fill(); c.stroke(); c.fillStyle = '#2E3A5E'; c.fillRect(px - 7, y - 14, 6, 14); c.fillRect(px + 1, y - 14, 6, 14); c.strokeRect(px - 7, y - 14, 6, 14); c.strokeRect(px + 1, y - 14, 6, 14); c.fillStyle = '#EBC49C'; c.beginPath(); c.arc(px, y - 48, 8, 0, 6.3); c.fill(); c.stroke(); if (hat) { c.fillStyle = '#E3C174'; c.beginPath(); c.ellipse(px, y - 53, 13, 3.5, 0, 0, 6.3); c.fill(); c.stroke(); c.fillRect(px - 6, y - 61, 12, 8); c.strokeRect(px - 6, y - 61, 12, 8); } }; person(x + 12, '#D8574B', true); person(x + 34, '#4F8FD0', false); c.beginPath(); c.moveTo(x + 40, y - 40); c.lineTo(x + 52, y - 66); c.stroke(); c.fillStyle = '#111'; c.fillRect(x + 48, y - 74, 9, 12); }
+    else if (o.n === 'carretto') { c.fillStyle = '#FFF4E0'; c.beginPath(); c.roundRect(x + 4, y - 34, 50, 26, 4); c.fill(); c.stroke(); c.fillStyle = '#E58BA2'; c.fillRect(x + 8, y - 30, 14, 8); c.fillStyle = '#F3D58B'; c.fillRect(x + 26, y - 30, 14, 8); c.strokeStyle = ink; c.beginPath(); c.moveTo(x + 29, y - 34); c.lineTo(x + 29, y - 50); c.stroke(); c.fillStyle = '#B8384C'; c.beginPath(); c.moveTo(x + 4, y - 50); c.quadraticCurveTo(x + 29, y - 66, x + 54, y - 50); c.closePath(); c.fill(); c.stroke(); c.fillStyle = '#222'; [x + 14, x + 44].forEach((wx) => { c.beginPath(); c.arc(wx, y - 6, 6, 0, 6.3); c.fill(); c.stroke(); }); }
+    else if (o.n === 'piccione') { const fl = Math.floor(fr / 6) % 2, by = o.y; c.fillStyle = '#9AA3B2'; c.beginPath(); c.ellipse(x + 17, by - 10, 14, 8, 0, 0, 6.3); c.fill(); c.stroke(); c.beginPath(); c.arc(x + 4, by - 15, 6, 0, 6.3); c.fill(); c.stroke(); c.fillStyle = '#E3A04A'; c.beginPath(); c.moveTo(x - 1, by - 15); c.lineTo(x - 8, by - 13); c.lineTo(x - 1, by - 12); c.fill(); c.fillStyle = '#2B1A22'; c.fillRect(x + 3, by - 17, 2, 2); c.fillStyle = '#7C8596'; c.beginPath(); if (fl) { c.moveTo(x + 12, by - 14); c.lineTo(x + 22, by - 30); c.lineTo(x + 28, by - 12); } else { c.moveTo(x + 12, by - 8); c.lineTo(x + 22, by + 6); c.lineTo(x + 28, by - 8); } c.closePath(); c.fill(); c.stroke(); }
+    c.restore();
+  }
+
+  function reset() {
+    g = { speed: 5.6, dist: 0, obs: [], nextIn: 520, clouds: Array.from({ length: 4 }, (_, i) => ({ x: i * 240 + rnd(0, 100), y: rnd(24, 90), s: rnd(.6, 1.2) })), night: 0, nightTarget: 0, nextNight: 400, scrollFar: 0, scrollNear: 0, ground: 0, flash: 0, frame: 0, zone: 0, banner: 0 };
+    hero.y = GY; hero.vy = 0; hero.jump = false; hero.duck = false; hero.fast = false; hero.air = 0; hero.buf = 0;
+  }
+
+  function spawn() {
+    const birdOk = g.dist > 300 && Math.random() < .3;
+    if (birdOk) { const lv = [GY - 8, GY - 38, GY - 84][(Math.random() * 3) | 0]; g.obs.push({ n: 'piccione', x: W + 20, y: lv, w: 34, h: 22, bird: true, top: lv - 24 }); }
+    else { const ty = TYPES[(Math.random() * TYPES.length) | 0]; const grp = g.dist > 500 && Math.random() < .25 && ty.n !== 'turisti'; g.obs.push({ n: ty.n, x: W + 20, y: GY, w: ty.w, h: ty.h }); if (grp) g.obs.push({ n: ty.n, x: W + 20 + ty.w + 6, y: GY, w: ty.w, h: ty.h }); }
+    g.nextIn = rnd(260, 420) + g.speed * rnd(40, 62);
+  }
+
+  const hitbox = () => hero.duck && !hero.jump ? { x: hero.x + 2, y: GY - 36, w: 46, h: 36 } : { x: hero.x + 9, y: hero.y - 62, w: 28, h: 62 };
+  function collide(o) {
+    const a = hitbox(); const b = o.bird ? { x: o.x + 3, y: o.y - 24, w: o.w - 4, h: 20 } : { x: o.x + 4, y: o.y - o.h + 4, w: o.w - 8, h: o.h - 4 };
+    return a.x < b.x + b.w && a.x + a.w > b.x && a.y < b.y + b.h && a.y + a.h > b.y;
+  }
+
+  function update(dt) {
+    g.frame += dt; g.speed = Math.min(13.5, g.speed + .0016 * dt); const sp = g.speed * dt;
+    g.dist += sp * .025; g.scrollFar += sp * .18; g.scrollNear += sp * .55; g.ground += sp;
+    // salto
+    if (hero.jump) {
+      hero.air = (hero.air || 0) + dt;
+      const gr = hero.fast ? 1.8 : (hero.holdJump && hero.vy < 0 ? .42 : .6);
+      hero.vy += gr * dt; hero.y += hero.vy * dt;
+      if (!hero.holdJump && hero.air > 7 && hero.vy < -6.5) hero.vy = -6.5;
+      if (hero.y >= GY) {
+        hero.y = GY; hero.vy = 0; hero.jump = false; hero.fast = false; hero.air = 0;
+        if (hero.buf > 0) { hero.jump = true; hero.vy = -11; hero.holdJump = false; hero.buf = 0; }
+      }
+    }
+    if (hero.buf > 0) hero.buf -= dt;
+    // ostacoli
+    g.nextIn -= sp; if (g.nextIn <= 0) spawn();
+    g.obs.forEach((o) => { o.x -= sp; }); g.obs = g.obs.filter((o) => o.x > -90);
+    if (g.obs.some(collide)) { die(); return; }
+    // giorno/notte
+    if (g.dist >= g.nextNight) { g.nightTarget = g.nightTarget ? 0 : 1; g.nextNight += 400; }
+    g.night += (g.nightTarget - g.night) * .01 * dt;
+    // traguardi ogni 100
+    const sc = Math.floor(g.dist);
+    if (sc > 0 && sc % 100 === 0 && g.lastMark !== sc) { g.lastMark = sc; g.flash = 26; chime([784, 988]); const z = Math.floor(sc / 100) % 4; g.zoneName = t('game.zone' + (z + 1)); g.banner = 150; }
+    if (g.flash > 0) g.flash -= dt; if (g.banner > 0) g.banner -= dt;
+    g.clouds.forEach((cl) => { cl.x -= sp * .12; if (cl.x < -90) { cl.x = W + rnd(0, 120); cl.y = rnd(24, 90); } });
+    $('#rnScore').textContent = String(sc).padStart(5, '0');
+  }
+
+  function die() {
+    state = 'over'; diedAt = performance.now(); hero.holdJump = false;
+    const sc = Math.floor(g.dist); chime([300, 220]);
+    if (sc > hi) { hi = sc; try { localStorage.setItem('mc_runner_hi', String(hi)); } catch (e) { /* ok */ } }
+    $('#rnHi').textContent = String(hi).padStart(5, '0');
+    cv.classList.add('shake'); setTimeout(() => cv.classList.remove('shake'), 400);
+  }
+
+  /* ---- disegno ---- */
+  function lerpCol(a, b, u) { const p = (h) => [1, 3, 5].map((i) => parseInt(h.slice(i, i + 2), 16)); const A = p(a), B = p(b); return 'rgb(' + A.map((v, i) => Math.round(v + (B[i] - v) * u)).join(',') + ')'; }
+  function draw() {
+    const c = cx, n = g.night;
+    const sky = c.createLinearGradient(0, 0, 0, GY); sky.addColorStop(0, lerpCol('#8FC4E8', '#10122E', n)); sky.addColorStop(1, lerpCol('#F8E3B8', '#5A3E6E', n));
+    c.fillStyle = sky; c.fillRect(0, 0, W, H);
+    if (n > .05) { c.globalAlpha = Math.min(1, n * 1.2); c.drawImage(layers.stars, 0, 0); c.globalAlpha = 1; }
+    // sole / luna
+    const ang = n * 1; const sx = 760 - n * 40, sy = 62 + n * 10;
+    c.fillStyle = lerpCol('#FFD66B', '#EDEFF5', n); c.beginPath(); c.arc(sx, sy, 22, 0, 6.3); c.fill();
+    if (n > .5) { c.fillStyle = 'rgba(16,18,46,.55)'; c.beginPath(); c.arc(sx + 8, sy - 4, 20, 0, 6.3); c.fill(); }
+    // nuvole
+    c.fillStyle = lerpCol('#FFFFFF', '#4A4470', n); g.clouds.forEach((cl) => { c.globalAlpha = .85; c.beginPath(); c.ellipse(cl.x, cl.y, 34 * cl.s, 11 * cl.s, 0, 0, 6.3); c.ellipse(cl.x + 18 * cl.s, cl.y - 7 * cl.s, 20 * cl.s, 10 * cl.s, 0, 0, 6.3); c.fill(); c.globalAlpha = 1; });
+    // skyline (due strati: giorno e notte in dissolvenza)
+    const off = -(g.scrollFar % 1800);
+    for (let k = 0; k < 2; k++) { const px = off + k * 1800; c.globalAlpha = 1 - n; c.drawImage(layers.day, px, GY - 260 + 6); c.globalAlpha = n; c.drawImage(layers.night, px, GY - 260 + 6); }
+    c.globalAlpha = 1;
+    // fascia di facciate vicine (arcate) che scorrono più veloci
+    const arc = 120, ao = -(g.scrollNear % arc);
+    c.fillStyle = lerpCol('#C9A774', '#3B2B4C', n); c.fillRect(0, GY - 24, W, 24);
+    c.fillStyle = lerpCol('#A9854F', '#2A1D3A', n);
+    for (let x = ao - arc; x < W + arc; x += arc) { c.beginPath(); c.moveTo(x + 18, GY - 24); c.lineTo(x + 18, GY - 12); c.arc(x + 48, GY - 12, 30, Math.PI, 0); c.lineTo(x + 78, GY - 24); c.closePath(); c.fill(); }
+    // strada acciottolata
+    c.fillStyle = lerpCol('#D8C29A', '#3E3250', n); c.fillRect(0, GY, W, H - GY);
+    c.strokeStyle = lerpCol('#9E8556', '#1F1830', n); c.lineWidth = 2; c.beginPath(); c.moveTo(0, GY + .5); c.lineTo(W, GY + .5); c.stroke();
+    c.strokeStyle = lerpCol('#B79F6E', '#2C2240', n); c.lineWidth = 1.5;
+    const go = -(g.ground % 40); for (let r = 0; r < 3; r++) { for (let x = go - 40 + (r % 2) * 20; x < W; x += 40) { c.beginPath(); c.roundRect(x, GY + 8 + r * 14, 30, 9, 3); c.stroke(); } }
+    // ostacoli e personaggio
+    g.obs.forEach((o) => drawObs(c, o, g.frame));
+    drawHero(c, hero.x, hero.y, state, g.frame, hero);
+    // lampo ai traguardi
+    if (g.flash > 0 && Math.floor(g.flash / 4) % 2) { c.fillStyle = 'rgba(255,244,224,.22)'; c.fillRect(0, 0, W, H); }
+    // banner del luogo
+    if (g.banner > 0 && g.zoneName) { c.globalAlpha = Math.min(1, g.banner / 40); c.fillStyle = 'rgba(26,16,48,.72)'; c.beginPath(); c.roundRect(W / 2 - 150, 16, 300, 34, 8); c.fill(); c.fillStyle = '#F3D58B'; c.font = '700 15px Cinzel, Georgia, serif'; c.textAlign = 'center'; c.fillText(g.zoneName, W / 2, 38); c.globalAlpha = 1; }
+    // testi di stato
+    if (state !== 'run') {
+      c.fillStyle = 'rgba(26,16,48,.55)'; c.fillRect(0, 0, W, H);
+      c.textAlign = 'center'; c.fillStyle = '#F3D58B'; c.font = '700 30px Cinzel, Georgia, serif';
+      const big = state === 'over' ? t('game.over') : state === 'pause' ? t('game.pause') : t('game.start');
+      c.fillText(state === 'ready' ? 'MEDICI & COMPAGNIA' : big, W / 2, 112);
+      c.fillStyle = '#FFF4E0'; c.font = '600 18px "Albert Sans", Arial, sans-serif'; c.fillText(state === 'ready' ? t('game.start') : state === 'over' ? t('game.restart') : '', W / 2, 150);
+    }
+  }
+
+  function frame(now) {
+    raf = requestAnimationFrame(frame);
+    const dt = Math.min(2.5, (now - last) / 16.667); last = now;
+    if (state === 'run') update(dt);
+    draw();
+  }
+
+  /* ---- comandi ---- */
+  let diedAt = 0;
+  function press() {
+    const ae = document.activeElement; if (ae && ae.tagName === 'BUTTON') ae.blur();
+    { const sec = $('#gioco-segreto'), r = sec.getBoundingClientRect(); if (r.top > innerHeight * .6 || r.bottom < innerHeight * .25) { sec.scrollIntoView({ behavior: 'auto', block: 'center' }); } start(); }
+    if (state === 'over' && performance.now() - diedAt < 600) return; // evita il riavvio involontario
+    if (state === 'ready' || state === 'over' || state === 'pause') { if (state !== 'pause') reset(); state = 'run'; last = performance.now(); hero.jump = true; hero.vy = -11; hero.holdJump = true; hero.air = 0; return; }
+    if (!hero.jump) { hero.jump = true; hero.vy = -11; hero.holdJump = true; hero.duck = false; hero.air = 0; }
+    else hero.buf = 8; // salto "in coda": parte appena atterri
+  }
+  const release = () => { hero.holdJump = false; };
+  function duck(on) { hero.duck = on; if (on && hero.jump) hero.fast = true; if (!on) hero.fast = false; }
+  function active() { return true; }
+  function activeOld() { const r = $('#gioco-segreto').getBoundingClientRect(); return !$('#gioco-segreto').hidden && r.top < innerHeight * .8 && r.bottom > innerHeight * .2; }
+
+  function init() {
+    cv = $('#rnCv'); cv.width = W * 2; cv.height = H * 2; cx = cv.getContext('2d'); cx.scale(2, 2);
+    layers.day = buildSky(false); layers.night = buildSky(true); layers.stars = buildStars();
+    reset(); $('#rnHi').textContent = String(hi).padStart(5, '0'); $('#rnScore').textContent = '00000';
+    document.addEventListener('keydown', (e) => {
+      const tag = (e.target.tagName || '').toLowerCase(); if (tag === 'input' || tag === 'textarea' || tag === 'select') return;
+      if (!active()) return;
+      if (e.key === ' ' || e.key === 'ArrowUp') { e.preventDefault(); if (!e.repeat) press(); }
+      else if (e.key === 'ArrowDown') { e.preventDefault(); duck(true); }
+    });
+    document.addEventListener('keyup', (e) => { if (e.key === ' ' || e.key === 'ArrowUp') release(); else if (e.key === 'ArrowDown') duck(false); });
+    cv.addEventListener('pointerdown', (e) => { e.preventDefault(); press(); });
+    cv.addEventListener('pointerup', release); cv.addEventListener('pointercancel', release);
+    const jb = $('#rnJump'), db = $('#rnDuck');
+    jb.addEventListener('pointerdown', (e) => { e.preventDefault(); press(); }); jb.addEventListener('pointerup', release); jb.addEventListener('pointerleave', release);
+    db.addEventListener('pointerdown', (e) => { e.preventDefault(); if (state !== 'run') press(); duck(true); }); ['pointerup', 'pointerleave', 'pointercancel'].forEach((ev) => db.addEventListener(ev, () => duck(false)));
+    document.addEventListener('visibilitychange', () => { if (document.hidden && state === 'run') state = 'pause'; });
+    if ('IntersectionObserver' in window) new IntersectionObserver((en) => { if (!en[0].isIntersecting && state === 'run') state = 'pause'; if (en[0].isIntersecting) start(); else stop(true); }, { threshold: .05 }).observe($('#gioco-segreto'));
+  }
+  function start() { if (!raf && !$('#gioco-segreto').hidden) { last = performance.now(); raf = requestAnimationFrame(frame); } }
+  function stop(soft) { if (raf) { cancelAnimationFrame(raf); raf = 0; } if (!soft && state === 'run') state = 'pause'; }
+  function focus() { start(); try { cv.focus({ preventScroll: true }); } catch (e) { /* ok */ } }
+  return { init, focus, stop, start, drawHero, hero, _dbg: { get g() { return g; }, hero, press, get state() { return state; }, set state(v) { state = v; }, hit: (o) => collide(o), W, GY } };
+})();
+
+document.addEventListener('DOMContentLoaded', () => {
+  applyTheme(); applyStatic();
+  $('#sparks').innerHTML = Array.from({ length: 22 }, (_, i) => `<i class="spark" style="left:${(i * 47) % 100}%;bottom:${(i * 13) % 40}%;animation-delay:${(i * .37).toFixed(2)}s"></i>`).join('');
+  $('#btnLang').onclick = () => { lang = LANGS[(LANGS.indexOf(lang) + 1) % LANGS.length]; applyStatic(); savePref(); };
+  $('#btnTheme').onclick = () => { const dark = S.theme ? S.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches; S.theme = dark ? 'light' : 'dark'; applyTheme(); savePref(); };
+  const back = (e) => { e.preventDefault(); if (history.length > 1 && document.referrer) history.back(); else location.href = 'index.html'; };
+  $('#rnBack').onclick = back; $('#brandLink').onclick = back;
+  RUN.init(); RUN.start();
+  /* ritratto che corre sul posto */
+  const pc = $('#ptCv'), px = pc.getContext('2d'); let fr = 0, lastT = 0;
+  (function loop(now) { requestAnimationFrame(loop); if (now - lastT < 33) return; lastT = now; fr++; px.clearRect(0, 0, 330, 390); px.save(); px.translate(0, 0); px.scale(4, 4); RUN.drawHero(px, 17, 95, 'run', fr, { jump: false, duck: false }); px.restore(); })(0);
+});
+</script></body></html>
